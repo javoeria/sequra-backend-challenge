@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: shoppers
+#
+#  id         :bigint           not null, primary key
+#  name       :string(255)
+#  email      :string(255)
+#  nif        :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  id: 1
+  name: "Vickey Nikolaus"
+  email: "vickey.nikolaus@not_gmail.com"
+  nif: "411111111Z"
+
+two:
+  id: 2
+  name: "Jennefer Murray"
+  email: "jennefer.murray@not_gmail.com"
+  nif: "411111112Z"

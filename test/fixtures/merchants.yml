@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: merchants
+#
+#  id         :bigint           not null, primary key
+#  name       :string(255)
+#  email      :string(255)
+#  cif        :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  id: 1
+  name: "Flatley-Rowe"
+  email: "info@flatley-rowe.com"
+  cif: "B611111111"
+
+two:
+  id: 2
+  name: "Weissnat, Hackett and Purdy"
+  email: "info@weissnat-hackett-and-purdy.com"
+  cif: "B611111112"

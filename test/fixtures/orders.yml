@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id           :bigint           not null, primary key
+#  merchant_id  :bigint
+#  shopper_id   :bigint
+#  amount       :float(24)        default(0.0)
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  completed_at :datetime
+#
+
+one:
+  id: 1
+  merchant_id: 1
+  shopper_id: 1
+  amount: 10
+  completed_at: "01/01/2018 00:00:00"
+
+two:
+  id: 2
+  merchant_id: 1
+  shopper_id: 1
+  amount: 100
+  completed_at: "01/01/2018 00:00:00"
+
+three:
+  id: 3
+  merchant_id: 1
+  shopper_id: 1
+  amount: 1000
+  completed_at: "01/01/2018 00:00:00"
