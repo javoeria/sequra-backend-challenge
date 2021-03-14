@@ -19,6 +19,10 @@ class Order < ApplicationRecord
 
   scope :completed, -> { where.not(completed_at: nil) }
 
+  def self.from_week(week, year)
+    where('WEEK(completed_at) = ? AND YEAR(completed_at) = ?', week, year)
+  end
+
   def disburse
     amount * (1 - fee)
   end

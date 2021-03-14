@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: disbursements
+#
+#  id             :bigint           not null, primary key
+#  merchant_id    :bigint
+#  week           :integer
+#  year           :integer
+#  total_orders   :integer          default(0)
+#  total_amount   :float(24)        default(0.0)
+#  total_disburse :float(24)        default(0.0)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+one:
+  id: 1
+  merchant_id: 1
+  week: 0
+  year: 2018
+  total_orders: 3
+  total_amount: 886.84
+  total_disburse: 879.24
+
+two:
+  id: 2
+  merchant_id: 1
+  week: 1
+  year: 2018
+  total_orders: 4
+  total_amount: 993.65
+  total_disburse: 984.53
