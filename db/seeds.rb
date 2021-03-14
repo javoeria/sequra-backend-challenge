@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+p 'destroy_all'
+Order.destroy_all
+Shopper.destroy_all
+Merchant.destroy_all
+
+p 'merchants'
+merchants = JSON.parse(File.read('db/dataset/merchants.json'))
+merchants['RECORDS'].each { |record| Merchant.create(record) }
+
+p 'shoppers'
+shoppers = JSON.parse(File.read('db/dataset/shoppers.json'))
+shoppers['RECORDS'].each { |record| Shopper.create(record) }
+
+p 'orders'
+orders = JSON.parse(File.read('db/dataset/orders.json'))
+orders['RECORDS'].each { |record| Order.create(record) }
