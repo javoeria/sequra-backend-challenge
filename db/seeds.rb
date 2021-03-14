@@ -25,17 +25,4 @@ orders = JSON.parse(File.read('db/dataset/orders.json'))
 orders['RECORDS'].each { |record| Order.create(record) }
 
 p 'disbursements'
-merchants = Merchant.all
-(0..13).to_a.each do |week|
-  merchants.each do |merchant|
-    orders = merchant.orders.completed.from_week(week, 2018)
-    Disbursement.create(
-      merchant_id: merchant.id,
-      week: week,
-      year: 2018,
-      total_orders: orders.size,
-      total_amount: orders.pluck(:amount).sum.round(2),
-      total_disburse: orders.map(&:disburse).sum.round(2)
-    )
-  end
-end
+(0..13).to_a.each { |week| DisbursementService.create_all(week: week, year: 2018) }

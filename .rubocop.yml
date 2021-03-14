@@ -1,0 +1,6 @@
+inherit_gem:
+  sequra-style:
+    - default.yml
+
+Style/StringLiterals:
+  Enabled: false
